@@ -1,0 +1,34 @@
+# .gitignore
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Environments
+venv/
+
+# Pytest cache
+.pytest_cache/
+
+# pyenv
+.python-version
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Databases
+*.db
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Local configuration files
+.local/
