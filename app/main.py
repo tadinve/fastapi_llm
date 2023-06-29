@@ -17,7 +17,6 @@ file = open('model.pickle', 'rb')
 llm = OpenAI(openai_api_key=openai.api_key)
 
 docmodel = pickle.load(file)
-from my_lib import wrap_text
 def run_qa(q):
     qa = RetrievalQA.from_chain_type(llm=llm,
                                  chain_type="stuff",
