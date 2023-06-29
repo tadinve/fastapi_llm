@@ -7,7 +7,7 @@ uvicorn app.main:app --reload
 
 
 #Docker
-docker buildx build . -f dockerfile --tag  fastapi
+docker  build . -f dockerfile --tag  fastapi
 docker run -p 8000:8000 fastapi 
 
 

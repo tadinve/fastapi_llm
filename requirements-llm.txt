@@ -1,0 +1,10 @@
+langchain==0.0.137
+openai==0.27.5
+pinecone-client==2.2.1
+tqdm==4.65.0
+sentence-transformers==2.2.2
+python-magic-bin
+unstructured
+pdf2image
+tiktoken
+faiss-cpu
