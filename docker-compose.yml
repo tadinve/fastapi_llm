@@ -2,8 +2,8 @@ services:
   llm:
     build:
       context: .
-    environment:
-      - OPENAI_API_KEY=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
+    env_file:
+      - .env
     container_name: fastapi
     restart: unless-stopped
     ports:

@@ -33,4 +33,6 @@ logs/
 # Local configuration files
 .local/
 
-Docker-compose*
+docker-compose.yml
+docker-compose.yml
+.env
