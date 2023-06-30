@@ -3,7 +3,7 @@
 <head>
   <title>BMC AMI Ops Monitor for Java Environments 4.1</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"></script>  
 </head>
 <body>
   <div class="container">
@@ -12,12 +12,18 @@
     <input type="text" id="inputText" class="form-control" placeholder="Ask Your Question Here">
     <button class="btn btn-primary" onclick="processText()">Ask Expert</button>
 
-    <textarea id="outputDuckDuckGo" class="form-control mt-4" disabled></textarea>
-    <h4>From Our Custom LLM Model</h4>
-    <textarea id="outputUpperCase" class="form-control mt-4" disabled></textarea>
-    <h4>.</h4>
-    <h4>From ChatGPT</h4>
-    <textarea id="outputLength" class="form-control mt-4" disabled></textarea>
+      &nbsp;
+      <h4 style="padding-top:30px">From Our Custom LLM Model</h4>
+      <textarea  rows="6" cols="200" id="outputUpperCase" class="form-control mt-4" disabled></textarea>
+      
+      &nbsp;
+      <h4 style="padding-top:30px">From Google</h4>
+      <textarea rows="6" cols="200" id="outputDuckDuckGo" class="form-control mt-4" disabled></textarea>
+      
+      &nbsp;
+      <h4 style="padding-top:30px">From ChatGPT</h4>
+      <textarea rows="6" cols="200" id="outputLength" class="form-control mt-4" disabled></textarea>
+
   </div>
 
   <script src="/static/js/main.js"></script>
