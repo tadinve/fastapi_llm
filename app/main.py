@@ -83,20 +83,20 @@ def process_text(data: TextData):
     original_text = data.text
 
     
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = [executor.submit(search_duckduckgo, original_text),
-                   executor.submit(run_qa, original_text),
-                   executor.submit(get_chatGPT_completion, prompt=original_text)]
+    # with concurrent.futures.ThreadPoolExecutor() as executor:
+    #     futures = [executor.submit(search_duckduckgo, original_text),
+    #                executor.submit(run_qa, original_text),
+    #                executor.submit(get_chatGPT_completion, prompt=original_text)]
 
-        results = [future.result() for future in concurrent.futures.as_completed(futures)]
+    #     results = [future.result() for future in concurrent.futures.as_completed(futures)]
 
-    duckduckgo_search = results[0]
-    upper_case_text = results[1]
-    text_length = results[2]
+    # duckduckgo_search = results[0]
+    # upper_case_text = results[1]
+    # text_length = results[2]
     
-    # duckduckgo_search = search_duckduckgo(original_text)
-    # upper_case_text = run_qa(original_text)
-    # text_length = get_chatGPT_completion(prompt=original_text)
+    duckduckgo_search = search_duckduckgo(original_text)
+    upper_case_text = run_qa(original_text)
+    text_length = get_chatGPT_completion(prompt=original_text)
 
     return {"duckduckgo_search": duckduckgo_search, "upper_case": upper_case_text, 
             "length": text_length}
