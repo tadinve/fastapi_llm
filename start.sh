@@ -8,7 +8,7 @@ uvicorn app.main:app --reload
 
 #Docker
 docker  build . -f Dockerfile --tag  fastapi
-docker run -p 8000:8000  --env OPENAI_API_KEY=dsfdsfdsgdsg fastapi
+docker run -p 8001:8000  --env OPENAI_API_KEY=dsfdsfdsgdsg fastapi
 
 
 
