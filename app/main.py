@@ -38,14 +38,16 @@ def get_chatGPT_completion(model="gpt-3.5-turbo-16k-0613", prompt="print hello w
     start_time = time.time()                           
     prompt = prompt + " also cite your source"
     print(prompt)
-    response = openai.Completion.create( model=model,
-                                        prompt=prompt,
-                                        temperature=temperature,
-                                        max_tokens=max_tokens,
-                                        presence_penalty=presence_penalty,
-                                        frequency_penalty=frequency_penalty,
-                                        )
-    resp = response.choices[0]["text"]
+    message=[{"role": "user", "content": prompt}]
+
+    response = openai.ChatCompletion.create(
+                model=model,
+                messages = message,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                frequency_penalty=frequency_penalty,
+                presence_penalty=presence_penalty)
+    resp = response.choices[0]["message"]["content"]
     print("response = ",resp)
     print(f"Chat GPT Time = {time.time()-start_time}")
     return resp
