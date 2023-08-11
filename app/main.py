@@ -33,7 +33,7 @@ def run_qa(q):
     print(f"Custom Model Time = {time.time()-start_time}")
     return qa.run(q)
 
-def get_chatGPT_completion(model="text-davinci-003", prompt="print hello world!", temperature=0, max_tokens=256
+def get_chatGPT_completion(model="gpt-3.5-turbo-16k-0613", prompt="print hello world!", temperature=0, max_tokens=1200
                            ,  frequency_penalty=0.0,  presence_penalty=0.0):
     start_time = time.time()                           
     prompt = prompt + " also cite your source"
